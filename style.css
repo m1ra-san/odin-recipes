@@ -1,7 +1,15 @@
+/* *{
+    outline: 2px solid red;
+} */
+
+body{
+    background-color: aliceblue;
+}
 .container{
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
     padding: 5px;
+    
 }
 
 p{
@@ -9,9 +17,14 @@ p{
     font-style: italic;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 
 h1{
-    background-color: rgb(255, 147, 246);
+    background-color: rgb(77, 121, 218);
     padding: 10px;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -19,5 +32,64 @@ h1{
 
 .container.content{
     text-align: left;
+    display: flex;
+    justify-content: center;
 }
 
+.plate{
+    display: flex;
+    /* outline: 2px solid purple; */
+    width: 100%;
+}
+
+.meals{
+    display:inline;
+    width: 700px;
+    color: brown;
+    margin: 0 20px;
+}
+
+
+.container.meals{
+    padding: 10px 0;
+}
+
+
+
+li .recipe-menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(151, 217, 236);
+    border-radius: 5px;
+    padding: 20px 0;
+    width: 300px;
+    height: auto;
+    
+}
+
+.recipe-menu img{
+    height: 200px;
+    width: auto ;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.recipe-menu:hover{
+    transform: scale(95%);
+    transition: transform 0.1s ease;
+}
