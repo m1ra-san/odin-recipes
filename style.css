@@ -1,95 +1,165 @@
-/* *{
-    outline: 2px solid red;
-} */
+*{
+    /* outline: 2px solid red; */
+    margin: 0;
+}
+:root {
+    --spacing: 5px;
+}
 
-body{
+
+body {
     background-color: aliceblue;
-}
-.container{
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-align: center;
-    padding: 5px;
-    
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-p{
+.main-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fancy-pixel {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 100px;
+    color: #fef2a0;
+    text-shadow:
+        2px 2px 0 #36454f,
+        -2px -2px 0 #36454f,
+        -2px 2px 0 #36454f,
+        2px -2px 0 #36454f;
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+/* ----------------Search Bar */
+.search-recipes {
+    width: 40%;
+    height: 30px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:0 0 50px 0 ;
+}
+
+.search-recipes input{
+  flex: 3 0 0;
+  border: none;
+  border-radius: 0;
+  padding: 0 10px;
+  outline: none;
+}
+
+.search-recipes button{
+  flex: 1 1 0;
+  border: none;
+  border-radius: 0;
+  background-color: #020403;
+  color: white;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+
+
+/* -----------------Recipes */
+
+
+p {
     color: rgb(92, 91, 91);
     font-style: italic;
+    font-size: clamp(32px, 5vw, 65px)
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
 
-h1{
-    background-color: rgb(77, 121, 218);
-    padding: 10px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.container.content{
+.content {
     text-align: left;
-    display: flex;
-    justify-content: center;
+    width: 80%;
+    padding: 0;
 }
 
-.plate{
+.content p{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #27282c;
+}
+
+.plate {
     display: flex;
-    /* outline: 2px solid purple; */
     width: 100%;
 }
 
-.meals{
-    display:inline;
+.meals {
+    display: inline;
     width: 700px;
     color: brown;
     margin: 0 20px;
 }
 
 
-.container.meals{
+.container.meals {
     padding: 10px 0;
 }
 
-
-
-li .recipe-menu{
+.featured-menu{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color:rgb(151, 217, 236);
-    border-radius: 5px;
-    padding: 20px 0;
-    width: 300px;
-    height: auto;
-    
-}
-
-.recipe-menu img{
-    height: 200px;
-    width: auto ;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    width: 80%;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    grid-template-rows: 3,1fr;
+    justify-content: center;
+    gap: 30px;
     list-style: none;
+    padding: 0;
 }
 
 
 
-.recipe-menu:hover{
+.recipe-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: #FFC06750;
+  width: 160px; 
+  height: 220px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.recipe-menu img {
+    width: 100%;
+    max-width: 200px;      
+    height: auto;
+    display: block;
+    border-radius: 3px;
+    image-rendering: pixelated;
+    filter: drop-shadow(2px 2px 0 #000); /* fake outline */
+}
+
+.recipe-menu span {
+    font-family: "Pixelify Sans", sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #27282c;
+}
+
+.recipe-menu:hover {
     transform: scale(95%);
     transition: transform 0.1s ease;
 }

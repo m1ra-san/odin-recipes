@@ -5,35 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
     <title>Odin Recipes</title>
 </head>
 
 <body>
-    <h1>Odin Recipes</h1>
-    <div class="container content">
-        <ul class="menu">
-            <li>
-                <div class="recipe-menu">
-                    <a href="recipes/adobo.html">
-                        <img src="images/adobo.png" alt="adobo">
-                        Adobo Recipe</a>
-                </div>
-            </li>
-            <li>
-                <div class="recipe-menu">
-                    <a href="recipes/carbonara.html">
-                        <img src="images/carbonara.png" alt="">
-                        <br>Italian Carbonara Recipe</a>
-                </div>
-            </li>
-            <li>
-                <div class="recipe-menu">
-                    <a href="recipes/lecheflan.html">
-                        <img src="images/lecheflan.png" alt="">
-                        Leche Flan Recipe</a>
-                </div>
-            </li>
-        </ul>
+    <div class="main-container">  
+        <h1 class="fancy-pixel">COOKING TIME</h1>
+        <div class="search-recipes">
+            <input type="text" class="search-input" placeholder="Search..."><button>Search</button>
+        </div>
+        
+        <div class="content">
+            <p>Featured Recipes:</p>
+            <ul class="featured-menu">
+                <li>
+                    <div class="recipe-menu">
+                        <a href="recipes/adobo.html">
+                            <img src="images/adobo.png" alt="adobo">
+                            <span>Adobo Recipe</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="recipe-menu">
+                        <a href="recipes/carbonara.html">
+                            <img src="images/carbonara.png" alt="">
+                            <span>Italian Carbonara<br>Recipe</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="recipe-menu">
+                        <a href="recipes/lecheflan.html">
+                            <img src="images/lecheflan.png" alt="">
+                            <span>Leche Flan Recipe</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </body>
